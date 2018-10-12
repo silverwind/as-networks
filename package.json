@@ -1,7 +1,7 @@
 {
   "name": "as-networks",
   "version": "1.0.0",
-  "description": "Get all networks contained in an autonomous system",
+  "description": "Get all CIDR networks contained in an autonomous system",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/as-networks",
   "license": "BSD-2-Clause",
@@ -23,13 +23,13 @@
     "whois",
     "objects"
   ],
+  "dependencies": {
+    "is-cidr": "^2.0.7"
+  },
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-silverwind": "^2.0.9",
     "updates": "^4.5.2",
     "ver": "^3.0.0"
-  },
-  "dependencies": {
-    "is-cidr": "^2.0.7"
   }
 }
