@@ -24,7 +24,7 @@
     "objects"
   ],
   "dependencies": {
-    "cidr-tools": "^2.0.2",
+    "cidr-tools": "^2.1.2",
     "is-cidr": "^3.0.0"
   },
   "devDependencies": {
