@@ -35,7 +35,7 @@ module.exports = async (name, opts = {}) => {
       output += String(data);
     });
 
-    socket.on("end", async () => {
+    socket.on("end", () => {
       for (const line of output.split(/\r?\n/gm)) {
         if (!line.startsWith("route")) continue;
         const [_, net] = line.split(/\s+/) || [];
