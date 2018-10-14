@@ -8,7 +8,7 @@ module.exports = async (name, opts = {}) => {
   return new Promise((resolve, reject) => {
     const nets = [];
 
-    opts = Object.assign({
+    opts = Object.assign({}, opts, {
       server: "whois.radb.net",
       port: 43,
     });
