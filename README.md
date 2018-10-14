@@ -15,18 +15,15 @@ $ npm i as-networks
 ```js
 const asNetworks = require('as-networks');
 
-const networks = await asNetworks('AS237');
-// => Array of CIDR networks in origin object AS237
-
-const networks = await asNetworks('MAINT-AS237');
-// => Array of CIDR networks maintained by object MAINT-AS237
+await asNetworks('AS237'); // => Array of CIDR networks in origin object AS237
+await asNetworks('MAINT-AS237'); // => Array of CIDR networks maintained by object MAINT-AS237
 ```
 
 ## API
 
 ### asNetworks(name, [options])
 
-Returns a promise that will resolve to an Array of CIDR networks found for `name`. If none are found, a empty array is returned. Will reject on network errors.
+Returns a promise that will resolve to an Array of merged and sorted CIDR networks found for `name`. If none are found, a empty array is returned. Will reject on network errors.
 
 #### options
 

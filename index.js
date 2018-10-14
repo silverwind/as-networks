@@ -2,10 +2,7 @@
 
 const net = require("net");
 const isCidr = require("is-cidr");
-
-function uniq(arr) {
-  return [...new Set(arr)];
-}
+const cidrTools = require("cidr-tools");
 
 module.exports = async (name, opts = {}) => {
   return new Promise((resolve, reject) => {
@@ -44,7 +41,8 @@ module.exports = async (name, opts = {}) => {
         const [_, net] = line.split(/\s+/) || [];
         if (net && isCidr(net)) nets.push(net.toLowerCase());
       }
-      resolve(uniq(nets));
+
+      resolve(cidrTools.merge(nets));
       socket.destroy();
     });
   });
