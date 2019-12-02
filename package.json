@@ -1,6 +1,6 @@
 {
   "name": "as-networks",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Get all CIDR networks contained in an autonomous system",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/as-networks",
